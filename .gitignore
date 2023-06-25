@@ -1,0 +1,13 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dev enviroment files
+.vscode/
+
+# Linters and other misc module files
+.eslintrc.js
+.stylelintrc
+
+# Misc. dirs
+/Dev_docs
