@@ -8,17 +8,95 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="menu-logo-container"></div>
-        <div class="menu-item-container"></div>
-        <div class="menu-linkbutton-container"></div>
-      </nav>
-    </header>
-    <main></main>
-    <footer><div class="copyright-info"></div></footer>
+    <h2 class="offscreen">My music page</h2>
+    <!-- header with navbar is created with header.js -->
+    <script src="./JS/header.js"></script>
+
+    <main>
+      <article>
+        <header>
+          <h1>Listen to my music</h1>
+        </header>
+        <section class="music-text-content">
+          <h2 class="offscreen">A few more words about my tunes</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            quam eveniet officia neque saepe alias aperiam iusto veniam id sint
+            explicabo incidunt ullam a sit inventore provident reprehenderit,
+            temporibus recusandae! Omnis aut sit quasi numquam provident saepe
+            iste corrupti culpa eos aliquam fugiat explicabo, quis commodi harum
+            maxime, repellat id vero aliquid enim possimus temporibus ex
+            architecto cum. Optio, in repellat! Iusto consequatur aliquam harum
+            ullam inventore delectus odio, odit numquam adipisci quas vel
+            aliquid, deleniti perspiciatis tenetur praesentium nihil illo
+            quisquam dolores. Sequi odit repellendus error laboriosam quam fugit
+            vel minus cum debitis qui officia facilis consequuntur sunt dolorem
+            nihil velit obcaecati, laudantium ad architecto eligendi, eius
+            suscipit nobis, quia dolore! Adipisci perferendis inventore eaque,
+            quod sunt accusantium incidunt. Odio, hic dolore? Adipisci, eaque
+            provident nisi blanditiis magni itaque, ipsam excepturi quod sequi
+            deleniti vero tenetur quae assumenda consequatur rerum id
+            consequuntur perferendis dolores corrupti quam sit corporis sunt
+            error! Non culpa ipsa adipisci quia saepe illo debitis autem aut
+            ducimus recusandae! Voluptatibus sed sunt totam repellendus iure
+            provident vero et id, repellat, corporis ipsa vel. Facere id ipsam
+            voluptates ab fugit itaque quasi nulla quisquam vitae fuga? Eligendi
+            quas hic dignissimos, ullam possimus pariatur assumenda quaerat
+            repellat alias.
+          </p>
+        </section>
+        <section class="music-card-content">
+          <h2 class="offscreen">You can listen here</h2>
+          <!----- SECTION IS GRID ----->
+          <div class="main-grid music-grid">
+            <div class="music-infocard grid-element">
+              <img
+                src="./Img/svg/headphones-solid.svg"
+                alt="Beatport icon"
+                class="music-infocard-image"
+              />
+              <p class="card-sitename">Beatport</p>
+              <div class="boxcontent">
+                You can find my producer work on Beatport
+              </div>
+            </div>
+            <div class="music-infocard grid-element">
+              <img
+                src="./Img/svg/mixcloud.svg"
+                alt="Mixcloud icon"
+                class="music-infocard-image"
+              />
+              <p class="card-sitename">Mixcloud</p>
+              <div class="boxcontent">My party mixes are on Mixcloud</div>
+            </div>
+            <div class="music-infocard grid-element">
+              <img
+                src="./Img/svg/soundcloud.svg"
+                alt="Soundcloud icon"
+                class="music-infocard-image"
+              />
+              <p class="card-sitename">Soundcloud</p>
+              <div class="boxcontent">
+                You can find my melodic event mixes on Soundcloud
+              </div>
+            </div>
+            <div class="music-infocard grid-element">
+              <img
+                src="./Img/svg/spotify.svg"
+                alt="Spotify icon"
+                class="music-infocard-image"
+              />
+              <p class="card-sitename">Spotify</p>
+              <div class="boxcontent">My curated playlist are on Spotify</div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <!-- Footer is made by js-->
+    <script src="./JS/footer.js"></script>
   </body>
 </html>

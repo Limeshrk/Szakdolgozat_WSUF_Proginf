@@ -1,0 +1,54 @@
+@import "variables";
+
+.offscreen {
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
+
+body {
+  margin: 0;
+  background-color: $color-bg-dark;
+  font-family: $font-family;
+  font-size: clamp($min-font-size, $preferred-font-size, $max-font-size);
+}
+
+.index-main {
+  height: 100vh;
+}
+
+.bg {
+  background: url("../Img/DK_index_cool.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: -1;
+}
+
+.menu-checkbox,
+.toggle-label {
+  display: none;
+}
+
+.copyright {
+  color: $color-text;
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.music-infocard-image {
+  filter: invert(1);
+}

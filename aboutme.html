@@ -8,17 +8,91 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="menu-logo-container"></div>
-        <div class="menu-item-container"></div>
-        <div class="menu-linkbutton-container"></div>
-      </nav>
-    </header>
-    <main></main>
-    <footer><div class="copyright-info"></div></footer>
+    <h2 class="offscreen">About me Page</h2>
+    <!-- header with navbar is created with header.js -->
+    <script src="./JS/header.js"></script>
+
+    <main>
+      <article>
+        <header class="content-header">
+          <h1>A few words of introduction</h1>
+        </header>
+        <section class="about-text-content">
+          <h2 class="offscreen">
+            Article about David Kovacs and his ars poetica
+          </h2>
+          <p>
+            I'm David Kovacs, a Budapest (HU) based DJ/Producer, active for more
+            than 12 years now. -(formerly known as Bonvibe)- <br />
+
+            'David Kovacs' being my actual name as a person, my stage name as a
+            DJ &#38; also one of the most common names in my home country
+            (separately &#38; combined as well) - I'm regarding it more like a
+            version of 'John Doe'... an anonymous... a face in the crowd. Many
+            others in the history of electronic music wore flashy helmets and
+            masks to hide the individual self, thus the focus can be on their
+            music, their craft.<br />
+            For me, my name is my helmet.<br />
+            It's like a secret code to earn entrance into a club known only by a
+            few - YOU are part of the few! <br />I'm not USING music to speak in
+            my behalf.<br />
+            I LET the music speak for itself.<br />
+            It's unstoppable... aiming to conquer your hearts one by one.<br />
+            It takes time but music is timeless.<br />
+            It's here to stay.<br />
+            I'm here to stay.<br /><br />
+            As for my style... I'm blending genres creating stiff alloys.<br />
+            Like a Blacksmith would do... a 'Kovács'.<br /><br />
+            #vibesovergenres #flowmatters<br />
+            Feels different.<br />
+            Feels right.<br />
+            Feels whole.
+          </p>
+        </section>
+        <section class="about-card-content">
+          <h2>My residencies</h2>
+          <!----- SECTION IS GRID ----->
+          <div class="main-grid music-grid">
+            <div class="music-infocard grid-element">
+              <img
+                src="./Img/svg/headphones-solid.svg"
+                alt="Beatport icon"
+                class="music-infocard-image"
+              />
+              <p class="card-sitename">Beatport</p>
+            </div>
+            <div class="music-infocard grid-element">
+              <img
+                src="./Img/svg/mixcloud.svg"
+                alt="Mixcloud icon"
+                class="music-infocard-image"
+              />
+              <p class="card-sitename">Mixcloud</p>
+            </div>
+            <div class="music-infocard grid-element">
+              <img
+                src="./Img/svg/soundcloud.svg"
+                alt="Soundcloud icon"
+                class="music-infocard-image"
+              />
+              <p class="card-sitename">Soundcloud</p>
+            </div>
+            <div class="music-infocard grid-element">
+              <img
+                src="./Img/svg/spotify.svg"
+                alt="Spotify icon"
+                class="music-infocard-image"
+              />
+              <p class="card-sitename">Spotify</p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <!-- Footer is made by js-->
+    <script src="./JS/footer.js"></script>
   </body>
 </html>

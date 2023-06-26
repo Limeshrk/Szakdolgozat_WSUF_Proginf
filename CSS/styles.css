@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.offscreen {
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
+
+body {
+  margin: 0;
+  background-color: #6f6f6f;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(14px, 4vw, 22px);
+}
+
+.index-main {
+  height: 100vh;
+}
+
+.bg {
+  background: url("../Img/DK_index_cool.png") no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: -1;
+}
+
+.menu-checkbox,
+.toggle-label {
+  display: none;
+}
+
+.copyright {
+  color: white;
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.music-infocard-image {
+  filter: invert(1);
+}/*# sourceMappingURL=styles.css.map */
