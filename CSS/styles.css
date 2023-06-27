@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Leto:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Leto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Leto:wght@400&display=swap");
 .main-menu-area {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin: 10px 5vw 15vh 5vw;
@@ -10,11 +12,13 @@
 .menubar-logo {
   height: 30px;
   width: auto;
+  align-self: center;
   align-self: flex-start;
 }
 
 .hide-menu {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .hide-menu a {
@@ -22,8 +26,8 @@
   color: #fff;
   height: 2em;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .hide-menu a:hover {
   color: #0070e0;
@@ -31,6 +35,7 @@
 
 .button-link-container {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .button-link-container a:not(:last-child) {
@@ -39,6 +44,7 @@
 
 .main-menu {
   display: flex;
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0 0 0 0;
@@ -51,11 +57,58 @@
   margin-right: 1em;
 }
 
-.menu-checkbox,
-.toggle-label {
+.menu-icon {
   display: none;
+  color: #fff;
 }
 
+.close-icon {
+  display: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 2em;
+    margin-left: 1em;
+  }
+  .hide-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0c151f;
+    z-index: 10;
+    padding: 1em;
+    text-align: center;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  .close-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 11;
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 520px) {
+  .menubar-logo {
+    height: auto;
+    width: 70vw;
+    align-self: flex-start;
+  }
+}
 .copyright, .index-footer {
   color: grey;
   position: static;
@@ -71,13 +124,13 @@
 }
 
 .grid-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #0c151f;
   text-align: center;
   font-weight: 400;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 15%;
   width: 150px;
   box-shadow: 0 0 20px 10px rgb(170, 167, 167);
@@ -107,40 +160,99 @@
   grid-column: 1/span 6;
   grid-row: 1;
 }
+@media (max-width: 1000px) {
+  .about-card-content .mymusic {
+    grid-column: 1/span 2;
+    grid-row: 1;
+  }
+}
+@media (max-width: 480px) {
+  .about-card-content .mymusic {
+    grid-column: 1/span 1;
+    grid-row: 1;
+  }
+}
 .about-card-content .beatport-card {
   grid-column: 2/span 1;
   grid-row: 2;
+}
+@media (max-width: 1000px) {
+  .about-card-content .beatport-card {
+    grid-column: 1/span 1;
+    grid-row: 2;
+  }
+}
+@media (max-width: 480px) {
+  .about-card-content .beatport-card {
+    grid-column: 1/span 1;
+    grid-row: 2;
+  }
 }
 .about-card-content .mixcloud-card {
   grid-column: 3/span 1;
   grid-row: 2;
 }
+@media (max-width: 1000px) {
+  .about-card-content .mixcloud-card {
+    grid-column: 2/span 1;
+    grid-row: 2;
+  }
+}
+@media (max-width: 480px) {
+  .about-card-content .mixcloud-card {
+    grid-column: 1/span 1;
+    grid-row: 3;
+  }
+}
 .about-card-content .soundcloud-card {
   grid-column: 4/span 1;
   grid-row: 2;
+}
+@media (max-width: 1000px) {
+  .about-card-content .soundcloud-card {
+    grid-column: 1/span 1;
+    grid-row: 3;
+  }
+}
+@media (max-width: 480px) {
+  .about-card-content .soundcloud-card {
+    grid-column: 1/span 1;
+    grid-row: 4;
+  }
 }
 .about-card-content .spotify-card {
   grid-column: 5/span 1;
   grid-row: 2;
 }
+@media (max-width: 1000px) {
+  .about-card-content .spotify-card {
+    grid-column: 2/span 1;
+    grid-row: 3;
+  }
+}
+@media (max-width: 480px) {
+  .about-card-content .spotify-card {
+    grid-column: 1/span 1;
+    grid-row: 5;
+  }
+}
 
-.offscreen {
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap; /* added line */
-  width: 1px;
+@media (max-width: 1000px) {
+  .about-card-grid {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (max-width: 700px) {
+  .about-card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 body {
   margin: 0;
   background-color: #0c151f;
   font-family: "Oswald", sans-serif;
-  font-size: clamp(8px, 4vw, 22px);
+  font-size: clamp(12px, 4vw, 22px);
 }
 
 p,
@@ -161,9 +273,9 @@ h2 {
 
 .about-main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .sub-headline,
@@ -220,8 +332,8 @@ h2 {
   color: #fff;
   font-size: 1.2em;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .contact-center a:hover {
   color: #0070e0;
@@ -233,4 +345,16 @@ h2 {
 .music-infocard-image {
   height: 100px;
   filter: invert(1);
+}
+
+.offscreen {
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
 }/*# sourceMappingURL=styles.css.map */

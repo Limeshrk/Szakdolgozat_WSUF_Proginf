@@ -11,6 +11,11 @@ $color-accent: #0070e0;
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Leto:wght@400&display=swap");
 
 $font-family: "Oswald", sans-serif;
-$min-font-size: 8px;
+$min-font-size: 12px;
 $preferred-font-size: 4vw;
 $max-font-size: 22px;
+
+//Responsive view breakpoints
+$breakpoint-desktop: 1000px;
+$breakpoint-tablet: 700px;
+$breakpoint-mobile: 480px;
