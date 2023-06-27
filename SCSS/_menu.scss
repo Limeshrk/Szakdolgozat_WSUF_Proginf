@@ -1,9 +1,13 @@
 @import "variables";
 @import "mixin";
 
+@import "variables";
+@import "mixin";
+
 //Menu area
 .main-menu-area {
   display: flex;
+  flex-direction: row;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -14,15 +18,18 @@
   height: 30px;
   width: auto;
   align-self: center;
+  align-self: center;
   align-self: flex-start;
 }
 
 .hide-menu {
   @include flex-center();
+  @include flex-center();
   a {
     text-decoration: none;
     color: $color-text;
     height: 2em;
+    @include flex-center();
     @include flex-center();
     &:hover {
       color: $color-accent;
@@ -32,12 +39,14 @@
 
 .button-link-container {
   @include flex-center();
+  @include flex-center();
   a:not(:last-child) {
     margin-right: 0.5em;
   }
 }
 
 .main-menu {
+  @include flex-center();
   @include flex-center();
   list-style: none;
   padding: 0 0 0 0;
@@ -50,6 +59,12 @@
   margin-right: 1em;
 }
 
+.menu-icon {
+  display: none;
+  color: $color-text;
+}
+
+.close-icon {
 .menu-icon {
   display: none;
   color: $color-text;
