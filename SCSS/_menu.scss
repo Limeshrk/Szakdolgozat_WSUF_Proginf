@@ -1,7 +1,10 @@
-//Menu area
+@import "variables";
+@import "mixin";
 
+//Menu area
 .main-menu-area {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin: 10px 5vw 15vh 5vw;
@@ -10,19 +13,17 @@
 .menubar-logo {
   height: 30px;
   width: auto;
+  align-self: center;
   align-self: flex-start;
 }
 
 .hide-menu {
-  display: flex;
-  align-items: center;
+  @include flex-center();
   a {
     text-decoration: none;
     color: $color-text;
     height: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center();
     &:hover {
       color: $color-accent;
     }
@@ -30,16 +31,14 @@
 }
 
 .button-link-container {
-  display: flex;
-  align-items: center;
+  @include flex-center();
   a:not(:last-child) {
     margin-right: 0.5em;
   }
 }
 
 .main-menu {
-  display: flex;
-  align-items: center;
+  @include flex-center();
   list-style: none;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
@@ -51,7 +50,57 @@
   margin-right: 1em;
 }
 
-.menu-checkbox,
-.toggle-label {
+.menu-icon {
   display: none;
+  color: $color-text;
+}
+
+.close-icon {
+  display: none;
+  color: $color-text;
+}
+
+//----- Responsive settings -----//
+//Toogle menu style
+
+@media screen and (max-width: $breakpoint-desktop) {
+  .menu-icon {
+    display: block;
+    cursor: pointer; // Add this line to show a pointer cursor when hovering over the icon
+    font-size: 2em; // Adjust the size of the icon as needed
+    margin-left: 1em; // Add some margin if needed
+  }
+
+  .hide-menu {
+    display: none;
+    flex-direction: column; // Make the menu items stack vertically
+    justify-content: flex-start; // Align the items to the start
+    position: fixed; // Fix the position of the menu
+    top: 0; // Start from the top of the screen
+    left: 0; // Start from the left of the screen
+    width: 100%; // Take the full width of the screen
+    height: 100%; // Take the full height of the screen
+    background: $color-bg-dark; // Replace with the color variable for your menu background
+    z-index: 10; // Make sure the menu is on top of other content
+    padding: 1em; // Add some padding to the menu
+  }
+
+  .close-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: $color-text;
+    z-index: 11;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .menubar-logo {
+    height: auto;
+    width: 70vw;
+    align-self: flex-start;
+  }
 }
