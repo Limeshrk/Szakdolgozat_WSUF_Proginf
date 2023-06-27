@@ -21,7 +21,7 @@ document.write(`
         <input type="checkbox" id="toggle" class="menu-checkbox" />
         <ul class="main-menu">
           <li class="menu-item">
-            <a href="aboutme.html">Introduction</a>
+            <a href="aboutme.html">Intro</a>
           </li>
           <li class="menu-item">
             <a href="schedules.html">Schedule</a>
@@ -31,42 +31,38 @@ document.write(`
           </li>
         </ul>
         <div class="button-link-container">
-          <a href="https://www.instagram.com/davidxkovacs/">
+          <a href="https://www.instagram.com/davidxkovacs/" aria-label="Instagram">
             <i
               class="fab fa-instagram"
-              title="Instagram"
-              aria-label="Instagram"
+              title="Instagram"           
             ></i>
           </a>
-          <a href="https://www.facebook.com/davidxkovacs">
+          <a href="https://www.facebook.com/davidxkovacs" aria-label="Facebook">
             <i
               class="fab fa-facebook-f"
               title="Facebook"
-              aria-label="Facebook"
             ></i>
           </a>
-          <a href="https://open.spotify.com/user/1l3f667a2ufvuwiqrxvikuflk">
-            <i class="fab fa-spotify" title="Spotify" aria-label="Spotify"></i>
+          <a href="https://open.spotify.com/user/1l3f667a2ufvuwiqrxvikuflk" aria-label="Spotify">
+            <i class="fab fa-spotify" title="Spotify"></i>
           </a>
-          <a href="https://soundcloud.com/davidxkovacs">
+          <a href="https://soundcloud.com/davidxkovacs" aria-label="Soundcloud">
             <i
               class="fab fa-soundcloud"
               title="Soundcloud"
-              aria-label="Soundcloud"
+              
             ></i>
           </a>
-          <a href="https://www.mixcloud.com/davidxkovacs/">
+          <a href="https://www.mixcloud.com/davidxkovacs/" aria-label="Mixcloud">
             <i
               class="fab fa-mixcloud"
-              title="Mixcloud"
-              aria-label="Mixcloud"
+              title="Mixcloud"              
             ></i>
           </a>
-          <a href="https://www.beatport.com/artist/bonvibe/691983">
+          <a href="https://www.beatport.com/artist/bonvibe/" aria-label="Beatport">
             <i
               class="fas fa-headphones"
-              title="Beatport"
-              aria-label="Beatport"
+              title="Beatport"              
             ></i>
           </a>
         </div>

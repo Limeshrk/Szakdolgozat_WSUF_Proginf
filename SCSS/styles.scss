@@ -31,7 +31,7 @@ h2 {
 
 // index.html
 .bg {
-  background: url("../Img/DK_index_cool.png") no-repeat center center fixed;
+  background: url("../Img/DK_index_cool.webp") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -59,8 +59,11 @@ h2 {
 }
 .about-text-content,
 .content-header {
-  max-width: 80vw;
+  max-width: 70vw;
   margin: 0 auto;
+  p {
+    line-height: 2;
+  }
 }
 
 .about-card-content,
@@ -72,6 +75,11 @@ h2 {
 }
 
 //schedules
+.schedule-container {
+  .sub-headline {
+    font-size: 1.25em;
+  }
+}
 
 .event-list {
   list-style: none;
@@ -82,6 +90,7 @@ h2 {
   li {
     justify-content: space-between;
     color: $color-text;
+    line-height: 2;
   }
 }
 
