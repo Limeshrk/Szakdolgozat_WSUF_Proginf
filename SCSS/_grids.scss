@@ -1,0 +1,58 @@
+@import "mixin";
+@import "variables";
+
+.grid-element {
+  background-color: $color-bg-darkblue;
+  text-align: center;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15%;
+  width: 150px;
+  box-shadow: 0 0 20px 10px rgb(170, 167, 167);
+  &:hover {
+    box-shadow: 0 0 20px 10px $color-accent;
+  }
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+//placement is: $row-start, $rows, $column-start, $colums
+
+//About.html
+.about-card-grid {
+  padding: 0;
+  margin: 50px auto 50px auto;
+  display: grid;
+  column-gap: 5vw;
+  row-gap: 5vh;
+  align-items: center;
+  justify-items: center;
+  grid-auto-rows: auto;
+  grid-template-columns: [page-start] auto [content-start] 15vw [content-mid1] 15vw [content-mid2] 15vw [content-mid3] 15vw [content-end] auto [page-end];
+}
+//placement is: $row-start, $column-start, $colums
+.about-card-content {
+  .mymusic {
+    @include grid-placement(1, 1, 6);
+  }
+  .beatport-card {
+    @include grid-placement(2, 2, 1);
+  }
+
+  .mixcloud-card {
+    @include grid-placement(2, 3, 1);
+  }
+
+  .soundcloud-card {
+    @include grid-placement(2, 4, 1);
+  }
+
+  .spotify-card {
+    @include grid-placement(2, 5, 1);
+  }
+}

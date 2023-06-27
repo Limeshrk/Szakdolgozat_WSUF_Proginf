@@ -1,4 +1,129 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Leto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Leto:wght@400&display=swap");
+.main-menu-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 5vw 15vh 5vw;
+}
+
+.menubar-logo {
+  height: 30px;
+  width: auto;
+  align-self: flex-start;
+}
+
+.hide-menu {
+  display: flex;
+  align-items: center;
+}
+.hide-menu a {
+  text-decoration: none;
+  color: #fff;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hide-menu a:hover {
+  color: #0070e0;
+}
+
+.button-link-container {
+  display: flex;
+  align-items: center;
+}
+.button-link-container a:not(:last-child) {
+  margin-right: 0.5em;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.menu-item {
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-right: 1em;
+}
+
+.menu-checkbox,
+.toggle-label {
+  display: none;
+}
+
+.copyright, .index-footer {
+  color: grey;
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.index-footer {
+  position: absolute;
+}
+
+.grid-element {
+  background-color: #0c151f;
+  text-align: center;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15%;
+  width: 150px;
+  box-shadow: 0 0 20px 10px rgb(170, 167, 167);
+}
+.grid-element:hover {
+  box-shadow: 0 0 20px 10px #0070e0;
+}
+.grid-element img {
+  display: block;
+  margin: auto;
+}
+
+.about-card-grid {
+  padding: 0;
+  margin: 50px auto 50px auto;
+  display: grid;
+  -moz-column-gap: 5vw;
+       column-gap: 5vw;
+  row-gap: 5vh;
+  align-items: center;
+  justify-items: center;
+  grid-auto-rows: auto;
+  grid-template-columns: [page-start] auto [content-start] 15vw [content-mid1] 15vw [content-mid2] 15vw [content-mid3] 15vw [content-end] auto [page-end];
+}
+
+.about-card-content .mymusic {
+  grid-column: 1/span 6;
+  grid-row: 1;
+}
+.about-card-content .beatport-card {
+  grid-column: 2/span 1;
+  grid-row: 2;
+}
+.about-card-content .mixcloud-card {
+  grid-column: 3/span 1;
+  grid-row: 2;
+}
+.about-card-content .soundcloud-card {
+  grid-column: 4/span 1;
+  grid-row: 2;
+}
+.about-card-content .spotify-card {
+  grid-column: 5/span 1;
+  grid-row: 2;
+}
+
 .offscreen {
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
@@ -13,39 +138,90 @@
 
 body {
   margin: 0;
-  background-color: #6f6f6f;
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(14px, 4vw, 22px);
+  background-color: #0c151f;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(8px, 4vw, 22px);
 }
 
-.index-main {
-  height: 100vh;
+p,
+h1,
+h2 {
+  color: #fff;
+  text-align: center;
 }
 
 .bg {
   background: url("../Img/DK_index_cool.png") no-repeat center center fixed;
   background-size: cover;
   position: absolute;
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
 }
 
-.menu-checkbox,
-.toggle-label {
-  display: none;
+.about-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.copyright {
-  color: white;
-  position: static;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.sub-headline,
+.main-headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.about-text-content,
+.content-header {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.about-card-content,
+.about-text-content {
+  display: block;
+  margin: 0, auto, 0, auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
   text-align: center;
-  padding: 10px 0;
+}
+.event-list li {
+  justify-content: space-between;
+  color: #fff;
+}
+
+.contact-center {
+  margin: 20px auto;
+}
+.contact-center .booking-element {
+  margin: 10vh;
+}
+.contact-center a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-center a:hover {
+  color: #0070e0;
+}
+.contact-center h2 {
+  font-size: 1.2em;
 }
 
 .music-infocard-image {
+  height: 100px;
   filter: invert(1);
 }/*# sourceMappingURL=styles.css.map */

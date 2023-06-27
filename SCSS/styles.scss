@@ -1,5 +1,10 @@
 @import "variables";
+@import "menu";
+@import "footer";
+@import "grids";
+@import "mixin";
 
+//Global settings
 .offscreen {
   clip-path: inset(100%);
   clip: rect(1px 1px 1px 1px); /* IE 6/7 */
@@ -17,11 +22,14 @@ body {
   font-family: $font-family;
   font-size: clamp($min-font-size, $preferred-font-size, $max-font-size);
 }
-
-.index-main {
-  height: 100vh;
+p,
+h1,
+h2 {
+  color: $color-text;
+  text-align: center;
 }
 
+// index.html
 .bg {
   background: url("../Img/DK_index_cool.png") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -29,26 +37,77 @@ body {
   -o-background-size: cover;
   background-size: cover;
   position: absolute;
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
 }
 
-.menu-checkbox,
-.toggle-label {
-  display: none;
+//aboutme.html
+.about-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.copyright {
+.sub-headline,
+.main-headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $color-text;
-  position: static;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
+}
+.about-text-content,
+.content-header {
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
+.about-card-content,
+.about-text-content {
+  display: block;
+  margin: 0, auto, 0, auto;
+  justify-content: center;
+  align-items: center;
+}
+
+//schedules
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  li {
+    justify-content: space-between;
+    color: $color-text;
+  }
+}
+
+//contact.html
+.contact-center {
+  margin: 20px auto;
+  .booking-element {
+    margin: 10vh;
+  }
+  a {
+    text-decoration: none;
+    color: $color-text;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+}
+//Technical
 .music-infocard-image {
+  height: 100px;
   filter: invert(1);
 }

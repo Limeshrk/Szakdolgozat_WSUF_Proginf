@@ -4,10 +4,10 @@ document.write(`
     <h2 class="offscreen">
     Main menu area
     </h2>
-    <div class="menu homelogo">
+    <div class="menu-homelogo">
       <a href="index.html">
         <img
-          src="./img/logo_50.png"
+          src="./img/logo.png"
           alt="David Kovacs logo"
           class="menubar-logo"
         />
@@ -21,10 +21,7 @@ document.write(`
         <input type="checkbox" id="toggle" class="menu-checkbox" />
         <ul class="main-menu">
           <li class="menu-item">
-            <a href="aboutme.html">About me</a>
-          </li>
-          <li class="menu-item">
-            <a href="music.html">Music</a>
+            <a href="aboutme.html">Introduction</a>
           </li>
           <li class="menu-item">
             <a href="schedules.html">Schedule</a>

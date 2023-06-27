@@ -1,12 +1,16 @@
 //Color definitions
-$color-bg-dark: #6f6f6f;
-$color-text: white;
+//$color-bg-dark: #434343;
+$color-bg-dark: #0c151f;
+$color-bg-black: #000;
+$color-bg-darkblue: #0c151f;
+$color-text: #fff;
+$color-fadetext: grey;
 $color-accent: #0070e0;
 
 //Font settings
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Leto:wght@400&display=swap");
 
-$font-family: "Roboto", sans-serif;
-$min-font-size: 14px;
+$font-family: "Oswald", sans-serif;
+$min-font-size: 8px;
 $preferred-font-size: 4vw;
 $max-font-size: 22px;
