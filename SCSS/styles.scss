@@ -43,6 +43,7 @@ h2 {
   @include flex-center();
   color: $color-text;
 }
+
 .about-text-content,
 .content-header {
   max-width: 70vw;
@@ -100,9 +101,26 @@ h2 {
   }
 }
 
+.contact-linktree-section {
+  margin: 10vh 0 0 0;
+}
+.contact-linktree-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+
+  a {
+    flex: 1 0 auto;
+    margin: 0.75em 0.5em 0 0.5em;
+    i {
+      font-size: 2em;
+    }
+  }
+}
+
 //Technical
 .music-infocard-image {
-  height: 100px;
   filter: invert(1);
 }
 

@@ -2,105 +2,84 @@
 @import "variables";
 
 .grid-element {
-  @include flex-center();
-  background-color: $color-bg-darkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-bg-card;
   text-align: center;
   font-weight: 400;
   flex-direction: column;
-
+  border-radius: 10%;
   padding: 15%;
-  width: 150px;
-  box-shadow: 0 0 20px 10px rgb(170, 167, 167);
-  &:hover {
-    box-shadow: 0 0 20px 10px $color-accent;
+  width: 100%;
+  max-width: 175px;
+  height: auto;
+  @media (max-width: $breakpoint-desktop) {
   }
+  @media (max-width: $breakpoint-tablet) {
+    max-height: 60%;
+    max-width: 60%;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 8px 8px $color-accent;
+  }
+
   img {
     display: block;
-    margin: auto;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    @media (max-width: $breakpoint-desktop) {
+    }
+    @media (max-width: $breakpoint-mobile) {
+    }
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 
-//placement is: $row-start, $rows, $column-start, $colums
-
-//About.html
 .about-card-grid {
-  padding: 0;
-  margin: 50px auto 50px auto;
   display: grid;
-  column-gap: 5vw;
-  row-gap: 5vh;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5vw;
   align-items: center;
   justify-items: center;
-  grid-auto-rows: auto;
-  grid-template-columns: [page-start] auto [content-start] 15vw [content-mid1] 15vw [content-mid2] 15vw [content-mid3] 15vw [content-end] auto [page-end];
-}
-//placement is: $row-start, $column-start, $colums
-.about-card-content {
-  .mymusic {
-    @include grid-placement(1, 1, 6);
-    @media (max-width: $breakpoint-desktop) {
-      @include grid-placement(1, 1, 2);
-    }
+  padding: 0;
+  margin: 50px auto;
 
-    @media (max-width: $breakpoint-mobile) {
-      @include grid-placement(1, 1, 1);
-    }
-  }
-  .beatport-card {
-    @include grid-placement(2, 2, 1);
-    @media (max-width: $breakpoint-desktop) {
-      @include grid-placement(2, 1, 1);
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      @include grid-placement(2, 1, 1);
-    }
-  }
-
-  .mixcloud-card {
-    @include grid-placement(2, 3, 1);
-    @media (max-width: $breakpoint-desktop) {
-      @include grid-placement(2, 2, 1);
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      @include grid-placement(3, 1, 1);
-    }
-  }
-
-  .soundcloud-card {
-    @include grid-placement(2, 4, 1);
-    @media (max-width: $breakpoint-desktop) {
-      @include grid-placement(3, 1, 1);
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      @include grid-placement(4, 1, 1);
-    }
-  }
-
-  .spotify-card {
-    @include grid-placement(2, 5, 1);
-    @media (max-width: $breakpoint-desktop) {
-      @include grid-placement(3, 2, 1);
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      @include grid-placement(5, 1, 1);
-    }
-  }
-}
-
-//----- Responsive view -----//
-
-.about-card-grid {
   @media (max-width: $breakpoint-desktop) {
-    // Styles for tablet view
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3vw; // small tablet gap
   }
 
   @media (max-width: $breakpoint-tablet) {
-    // Styles for mobile view
     grid-template-columns: 1fr;
+  }
+
+  & > .mymusic {
+    grid-column: span 4;
+
+    @media (max-width: $breakpoint-desktop) {
+      grid-column: span 2;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-column: span 1;
+    }
+  }
+
+  & > .music-infocard {
+    grid-column: span 1;
+
+    @media (max-width: $breakpoint-desktop) {
+      grid-column: span 1;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-column: span 1;
+    }
   }
 }

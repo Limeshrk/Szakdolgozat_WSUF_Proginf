@@ -1,5 +1,5 @@
 document.write(`
 <footer>
-  <div class="copyright"><div>Copyright &copy; 2023</div></div>
+  <div class="copyright"><p>Copyright &copy; 2023</p></div>
 </footer>
 `);
