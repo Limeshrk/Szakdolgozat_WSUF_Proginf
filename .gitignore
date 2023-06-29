@@ -5,16 +5,11 @@ Thumbs.db
 # Dev enviroment files
 .vscode/
 
+# Linters
+.eslintrc.js
+.prettierrc.js
+.stylelintrc
+
 #node.js
 /node_modules
 package-lock.json
-
-#webpack
-/dist
-
-# Linters and other misc module files
-.eslintrc.js
-.stylelintrc
-.prettierrc.js
-# Misc. dirs
-/Dev_docs
