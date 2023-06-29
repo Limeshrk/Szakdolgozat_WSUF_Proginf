@@ -55,7 +55,7 @@ function buildHeader() {
                 <i class="fab fa-mixcloud" title="Mixcloud"></i>
               </a>
               <a
-                href="https://www.beatport.com/artist/bonvibe/"
+                href="https://www.beatport.com/artist/bonvibe/691983"
                 aria-label="Beatport link"
               >
                 <i class="fas fa-headphones" title="Beatport"></i>

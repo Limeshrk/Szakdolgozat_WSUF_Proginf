@@ -9,9 +9,9 @@ $color-accent: #1469cb;
 $color-accent-alt: #ff715b;
 
 //Font settings
-@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Leto:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-$font-family: "Oswald", sans-serif;
+$font-family: 'Oswald', sans-serif;
 $min-font-size: 12px;
 $preferred-font-size: 4vw;
 $max-font-size: 22px;
