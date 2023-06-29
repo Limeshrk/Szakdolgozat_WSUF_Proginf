@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DavidxKovacs:Intro</title>
+    <title>About DJ David Kovacs | Rising Music DJ and Producer</title>
+    <meta
+      name="description"
+      content="Learn more about DJ David Kovacs, a rising star in the music industry. Discover his journey, inspirations, and the story behind his unique sound." />
+    <meta
+      name="keywords"
+      content="DJ David Kovacs, electronic music, music producer, EDM, DJ, story, introduction, about" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/solid.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <h2 class="offscreen">About me Page</h2>
-    <!-- header with navbar is created with header.js -->
-    <script src="./JS/header.js"></script>
+    <!-- header  is made by .js -->
+    <div class="build-header"></div>
 
     <main class="about-main">
       <article>
@@ -24,20 +29,17 @@
         <section class="about-text-content">
           <h2 class="offscreen">Article about David Kovacs and his music</h2>
           <p>
-            I'm David Kovacs, a Budapest (HU) based DJ/Producer, active for more
-            than 12 years now. -(formerly known as Bonvibe)- <br />
+            I'm David Kovacs, a Budapest (HU) based DJ/Producer, active for more than 12 years now. -(formerly known as
+            Bonvibe)- <br />
 
-            'David Kovacs' being my actual name as a person, my stage name as a
-            DJ &#38; also one of the most common names in my home country
-            (separately &#38; combined as well) - I'm regarding it more like a
-            version of 'John Doe'... an anonymous... a face in the crowd. <br />
-            Many others in the history of electronic music wore flashy helmets
-            and masks to hide the individual self, thus the focus can be on
-            their music, their craft.<br />
+            'David Kovacs' being my actual name as a person, my stage name as a DJ &#38; also one of the most common
+            names in my home country (separately &#38; combined as well) - I'm regarding it more like a version of 'John
+            Doe'... an anonymous... a face in the crowd. <br />
+            Many others in the history of electronic music wore flashy helmets and masks to hide the individual self,
+            thus the focus can be on their music, their craft.<br />
             For me, my name is my helmet.<br />
-            It's like a secret code to earn entrance into a club known only by a
-            few - YOU are part of the few! <br />I'm not USING music to speak in
-            my behalf.<br />
+            It's like a secret code to earn entrance into a club known only by a few - YOU are part of the few!
+            <br />I'm not USING music to speak in my behalf.<br />
             I LET the music speak for itself.<br />
             It's unstoppable... aiming to conquer your hearts one by one.<br />
             It takes time but music is timeless.<br />
@@ -56,54 +58,26 @@
           <div class="about-card-grid">
             <h2 class="sub-headline mymusic">MUSIC</h2>
             <div class="music-infocard beatport-card grid-element">
-              <a
-                href="https://www.beatport.com/artist/bonvibe/"
-                aria-label="Beatport"
-              >
-                <img
-                  src="./Img/svg/headphones-solid.svg"
-                  alt="Beatport icon"
-                  class="music-infocard-image"
-                />
+              <a href="https://www.beatport.com/artist/bonvibe/" aria-label="Beatport">
+                <img src="./Img/svg/headphones-solid.svg" alt="Beatport icon" class="music-infocard-image" />
                 <p class="card-sitename">Beatport</p>
               </a>
             </div>
             <div class="music-infocard mixcloud-card grid-element">
-              <a
-                href="https://www.mixcloud.com/davidxkovacs/"
-                aria-label="Mixcloud"
-              >
-                <img
-                  src="./Img/svg/mixcloud.svg"
-                  alt="Mixcloud icon"
-                  class="music-infocard-image"
-                />
+              <a href="https://www.mixcloud.com/davidxkovacs/" aria-label="Mixcloud">
+                <img src="./Img/svg/mixcloud.svg" alt="Mixcloud icon" class="music-infocard-image" />
                 <p class="card-sitename">Mixcloud</p>
               </a>
             </div>
             <div class="music-infocard soundcloud-card grid-element">
-              <a
-                href="https://soundcloud.com/davidxkovacs"
-                aria-label="Soundcloud"
-              >
-                <img
-                  src="./Img/svg/soundcloud.svg"
-                  alt="Soundcloud icon"
-                  class="music-infocard-image"
-                />
+              <a href="https://soundcloud.com/davidxkovacs" aria-label="Soundcloud">
+                <img src="./Img/svg/soundcloud.svg" alt="Soundcloud icon" class="music-infocard-image" />
                 <p class="card-sitename">Soundcloud</p>
               </a>
             </div>
             <div class="music-infocard spotify-card grid-element">
-              <a
-                href="https://open.spotify.com/user/1l3f667a2ufvuwiqrxvikuflk"
-                aria-label="Spotify"
-              >
-                <img
-                  src="./Img/svg/spotify.svg"
-                  alt="Spotify icon"
-                  class="music-infocard-image"
-                />
+              <a href="https://open.spotify.com/user/1l3f667a2ufvuwiqrxvikuflk" aria-label="Spotify">
+                <img src="./Img/svg/spotify.svg" alt="Spotify icon" class="music-infocard-image" />
                 <p class="card-sitename">Spotify</p>
               </a>
             </div>
@@ -111,7 +85,13 @@
         </section>
       </article>
     </main>
-    <!-- Footer is made by js-->
-    <script src="./JS/footer.js"></script>
+    <div class="build-footer">
+      <!-- Footer is made by js-->
+    </div>
+    <script src="./dist/bundle.js"></script>
+    <script>
+      buildHeader();
+      buildFooter();
+    </script>
   </body>
 </html>

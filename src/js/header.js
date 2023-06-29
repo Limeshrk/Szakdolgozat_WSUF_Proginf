@@ -1,5 +1,6 @@
-window.addEventListener("DOMContentLoaded", function () {
-  var headerHTML = `
+function buildHeader() {
+  window.addEventListener('DOMContentLoaded', function () {
+    var headerHTML = `
     <header class="nav-header">
       <nav class="main-menu-area">
         <h2 class="offscreen">Main menu area</h2>
@@ -31,31 +32,31 @@ window.addEventListener("DOMContentLoaded", function () {
             <div class="button-link-container">
               <a
                 href="https://www.instagram.com/davidxkovacs/"
-                aria-label="Instagram"
+                aria-label="Instagram link"
               >
                 <i class="fab fa-instagram" title="Instagram"></i>
               </a>
-              <a href="https://www.facebook.com/davidxkovacs" aria-label="Facebook">
+              <a href="https://www.facebook.com/davidxkovacs" aria-label="Facebook link">
                 <i class="fab fa-facebook-f" title="Facebook"></i>
               </a>
               <a
                 href="https://open.spotify.com/user/1l3f667a2ufvuwiqrxvikuflk"
-                aria-label="Spotify"
+                aria-label="Spotify link"
               >
                 <i class="fab fa-spotify" title="Spotify"></i>
               </a>
-              <a href="https://soundcloud.com/davidxkovacs" aria-label="Soundcloud">
+              <a href="https://soundcloud.com/davidxkovacs" aria-label="Soundcloud link">
                 <i class="fab fa-soundcloud" title="Soundcloud"></i>
               </a>
               <a
                 href="https://www.mixcloud.com/davidxkovacs/"
-                aria-label="Mixcloud"
+                aria-label="Mixcloud link"
               >
                 <i class="fab fa-mixcloud" title="Mixcloud"></i>
               </a>
               <a
                 href="https://www.beatport.com/artist/bonvibe/"
-                aria-label="Beatport"
+                aria-label="Beatport link"
               >
                 <i class="fas fa-headphones" title="Beatport"></i>
               </a>
@@ -65,24 +66,28 @@ window.addEventListener("DOMContentLoaded", function () {
       </nav>
     </header>`;
 
-  var newElement = document.createElement("div");
-  newElement.innerHTML = headerHTML;
-  document.body.insertBefore(newElement, document.body.firstChild);
+    var buildHeaderDiv = document.querySelector('.build-header');
+    var newElement = document.createElement('div');
+    newElement.innerHTML = headerHTML;
+    buildHeaderDiv.appendChild(newElement);
 
-  // Add event listener to menu icon
-  var menuIcon = document.querySelector(".menu-icon");
-  var hideMenu = document.querySelector(".hide-menu");
+    // Add event listener to menu icon
+    var menuIcon = buildHeaderDiv.querySelector('.menu-icon');
+    var hideMenu = buildHeaderDiv.querySelector('.hide-menu');
 
-  menuIcon.addEventListener("click", function () {
-    // Show the menu when the icon is clicked
-    hideMenu.style.display = "flex";
+    menuIcon.addEventListener('click', function () {
+      // Show the menu when the icon is clicked
+      hideMenu.style.display = 'flex';
+    });
+
+    // Add event listener to close icon
+    var closeIcon = buildHeaderDiv.querySelector('.close-icon');
+
+    closeIcon.addEventListener('click', function () {
+      // Hide the menu when the close icon is clicked
+      hideMenu.style.display = 'none';
+    });
   });
+}
 
-  // Add event listener to close icon
-  var closeIcon = document.querySelector(".close-icon");
-
-  closeIcon.addEventListener("click", function () {
-    // Hide the menu when the close icon is clicked
-    hideMenu.style.display = "none";
-  });
-});
+module.exports = buildHeader;

@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DavidxKovacs:Contact</title>
+    <title>Contact DJ David Kovacs | Bookings and Inquiries</title>
+    <meta
+      name="description"
+      content="Get in touch with DJ David Kovacs for event bookings, collaborations, or general inquiries." />
+    <meta
+      name="keywords"
+      content="DJ David Kovacs, electronic music, music producer, EDM, DJ, contact, music, booking, info, " />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/solid.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
-      <!-- header with navbar is created with header.js -->
-      <script src="./JS/header.js"></script>
+      <!-- header with navbar is created with .js -->
+      <div class="build-header"></div>
     </header>
     <main class="contact-center">
       <section class="contact-text-content">
@@ -42,42 +47,34 @@
       <section class="contact-linktree-section">
         <h2 class="sub-headline">LINKTREE</h2>
         <div class="contact-linktree-container">
-          <a
-            href="https://www.instagram.com/davidxkovacs/"
-            aria-label="Instagram"
-          >
+          <a href="https://www.instagram.com/davidxkovacs/" aria-label="Instagram link">
             <i class="fab fa-instagram" title="Instagram"></i>
           </a>
-          <a href="https://www.facebook.com/davidxkovacs" aria-label="Facebook">
+          <a href="https://www.facebook.com/davidxkovacs" aria-label="Facebook link">
             <i class="fab fa-facebook-f" title="Facebook"></i>
           </a>
-          <a
-            href="https://open.spotify.com/user/1l3f667a2ufvuwiqrxvikuflk"
-            aria-label="Spotify"
-          >
+          <a href="https://open.spotify.com/user/1l3f667a2ufvuwiqrxvikuflk" aria-label="Spotify link">
             <i class="fab fa-spotify" title="Spotify"></i>
           </a>
-          <a href="https://soundcloud.com/davidxkovacs" aria-label="Soundcloud">
+          <a href="https://soundcloud.com/davidxkovacs" aria-label="Soundcloud link">
             <i class="fab fa-soundcloud" title="Soundcloud"></i>
           </a>
-          <a
-            href="https://www.mixcloud.com/davidxkovacs/"
-            aria-label="Mixcloud"
-          >
+          <a href="https://www.mixcloud.com/davidxkovacs/" aria-label="Mixcloud link">
             <i class="fab fa-mixcloud" title="Mixcloud"></i>
           </a>
-          <a
-            href="https://www.beatport.com/artist/bonvibe/"
-            aria-label="Beatport"
-          >
+          <a href="https://www.beatport.com/artist/bonvibe/" aria-label="Beatport link">
             <i class="fas fa-headphones" title="Beatport"></i>
           </a>
         </div>
       </section>
     </main>
-    <div>
+    <div class="build-footer">
       <!-- Footer is made by js-->
-      <script src="./JS/footer.js"></script>
     </div>
+    <script src="./dist/bundle.js"></script>
+    <script>
+      buildHeader();
+      buildFooter();
+    </script>
   </body>
 </html>

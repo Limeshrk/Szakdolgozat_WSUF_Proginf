@@ -3,23 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DavidxKovacs:Schedule</title>
+    <title>DJ David Kovacs Event Schedule | Live Performances and Gigs</title>
+    <meta
+      name="description"
+      content="Stay updated with DJ David Kovacs's event schedule. Don't miss out on his electrifying performances at clubs, festivals, and private events." />
+    <meta
+      name="keywords"
+      content="DJ David Kovacs, electronic music, music producer, EDM, DJ, schedule, live, locations, time, date" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/solid.css" />
     <link rel="stylesheet" href="./CSS/styles.css" />
   </head>
   <body>
     <!-- header with navbar is created with header.js -->
-    <script src="./JS/header.js"></script>
+    <div class="build-header"></div>
 
     <main>
       <article class="schedule-container">
         <header>
           <h1 class="main-headline">SCHEDULE</h1>
-          <h2 class="sub-headline month">JULY</h2>
+          <h2 class="sub-headline month">JUNE</h2>
         </header>
         <div class="table-container">
           <ul class="event-list">
@@ -94,7 +99,13 @@
         <p class="CTA">See you there!</p>
       </article>
     </main>
-    <!-- Footer is made by js-->
-    <script src="./JS/footer.js"></script>
+    <div class="build-footer">
+      <!-- Footer is made by js-->
+    </div>
+    <script src="./dist/bundle.js"></script>
+    <script>
+      buildHeader();
+      buildFooter();
+    </script>
   </body>
 </html>

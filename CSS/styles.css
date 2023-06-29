@@ -41,6 +41,11 @@
 .button-link-container a:not(:last-child) {
   margin-right: 0.5em;
 }
+@media screen and (min-width: 1000px) {
+  .button-link-container {
+    font-size: 130%;
+  }
+}
 
 .main-menu {
   display: flex;
@@ -316,7 +321,7 @@ h2 {
 }
 
 .contact-linktree-section {
-  margin: 10vh 0 0 0;
+  margin: 20vh 0 0 0;
 }
 
 .contact-linktree-container {
@@ -324,6 +329,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   padding: 1em;
+  margin: 0 20vw 0 20vw;
 }
 .contact-linktree-container a {
   flex: 1 0 auto;

@@ -3,27 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DavidxKovacs:Main page</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
+    <title>David Kovacs | DJ and Producer</title>
+    <meta
+      name="description"
+      content="Welcome to the official website of DJ David Kovacs, your source for the latest mixes, event schedules, and more." />
+    <meta name="keywords" content="DJ David Kovacs, electronic music, music producer, EDM, DJ, story, introduction" />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="./Fonts/fontawesome/css/solid.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="bg">
     <div>
       <h2 class="offscreen">DJ David Kovacs Main Page</h2>
-      <!-- header with navbar is created with header.js -->
-      <script src="./JS/header.js"></script>
+      <div class="build-header">
+        <!-- Header is made by js-->
+      </div>
       <main class="index-main">
         <!-- main is an image -->
       </main>
     </div>
     <div class="index-footer">
       <!-- Footer is made by js-->
-      <script src="./JS/footer.js"></script>
     </div>
+    <script src="./dist/bundle.js"></script>
+    <script>
+      buildHeader();
+      buildFooter();
+    </script>
   </body>
 </html>
